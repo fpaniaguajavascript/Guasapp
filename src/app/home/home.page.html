@@ -13,14 +13,14 @@
     </ion-toolbar>
   </ion-header>
   <ion-item>
-    <ion-input placeholder="Emisor"></ion-input>
+    <ion-input placeholder="Emisor" [(ngModel)]="from"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input placeholder="Receptor"></ion-input>
+    <ion-input placeholder="Receptor" [(ngModel)]="to"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input placeholder="Mensaje"></ion-input>
-    <ion-button>Enviar</ion-button>
+    <ion-input placeholder="Mensaje" [(ngModel)]="message"></ion-input>
+    <ion-button (click)="enviar()">Enviar</ion-button>
   </ion-item>
   <ion-list>
     <ion-item *ngFor="let mensaje of mensajes">

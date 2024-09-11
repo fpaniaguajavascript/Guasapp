@@ -16,7 +16,7 @@ export class HomePage {
   public from: string = "";
   public to: string = "";
   public message: string = "";
-  constructor(private firebaseService: FirebaseRTBService) {
+  constructor(public firebaseService: FirebaseRTBService) {
     this.mensajes = this.firebaseService.mensajes;
   }
   public enviar() {

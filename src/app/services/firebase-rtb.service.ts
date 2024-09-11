@@ -17,6 +17,7 @@ export class FirebaseRTBService {
     this.ref = ref(this.db, '/');
 
     onValue(this.ref, (snapshot) => {
+      this.mensajes = []
       snapshot.forEach((childSnapshot) => {
         this.mensajes.push(childSnapshot.val());
         console.log(childSnapshot.val());

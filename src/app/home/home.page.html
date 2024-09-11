@@ -23,7 +23,7 @@
     <ion-button (click)="enviar()">Enviar</ion-button>
   </ion-item>
   <ion-list>
-    <ion-item *ngFor="let mensaje of mensajes">
+    <ion-item *ngFor="let mensaje of firebaseService.mensajes">
       {{mensaje}}
     </ion-item>
   </ion-list>

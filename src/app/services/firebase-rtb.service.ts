@@ -10,20 +10,24 @@ import { environment } from 'src/environments/environment';
 export class FirebaseRTBService {
   private db: Database;
   private ref: DatabaseReference;
-  public mensajes: string[] = [];
+  public mensajes: any[] = [];
   constructor() {
     initializeApp(environment.firebaseConfig);
     this.db = getDatabase();
     this.ref = ref(this.db, '/');
-
     onValue(this.ref, (snapshot) => {
       this.mensajes = []
       snapshot.forEach((childSnapshot) => {
         this.mensajes.push(childSnapshot.val());
-        console.log(childSnapshot.val());
       });
     }, {
       onlyOnce: false
     });
   }
+
+  enviarMensaje(_from: string, _message: string) {
+    const nuevoMensaje = push(this.ref);//Crea el mensaje y obtiene una clave
+    set(nuevoMensaje, { from: _from, message: _message });//Escribe el mensaje
+  }
+
 }

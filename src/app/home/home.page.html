@@ -11,15 +11,16 @@
     <ion-toolbar>
       <ion-title size="large">SanBlasGuasapp</ion-title>
     </ion-toolbar>
-    <ion-item>
-      <ion-input placeholder="Emisor" [(ngModel)]="from" [disabled]="registrado"></ion-input>
-      <ion-button (click)="registrarUsuario()" [disabled]="from.length==0 || registrado">Registrar</ion-button>
-    </ion-item>
-    <ion-item>
-      <ion-input placeholder="Mensaje" [(ngModel)]="message"></ion-input>
-      <ion-button (click)="enviar()" [disabled]="message.length==0 || !registrado">Enviar</ion-button>
-    </ion-item>
   </ion-header>
+
+  <ion-item>
+    <ion-input placeholder="Emisor" [(ngModel)]="from" [disabled]="registrado"></ion-input>
+    <ion-button (click)="registrarUsuario()" [disabled]="from.length==0 || registrado">Registrar</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="Mensaje" [(ngModel)]="message"></ion-input>
+    <ion-button (click)="enviar()" [disabled]="message.length==0 || !registrado">Enviar</ion-button>
+  </ion-item>
 
   <ion-list lines="none">
     <ion-item class="mensaje" *ngFor="let mensaje of firebaseService.mensajes.reverse()"

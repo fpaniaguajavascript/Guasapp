@@ -26,12 +26,12 @@ export class HomePage {
       this.from = alias;
     }
   }
-  public enviar() {
-    this.firebaseService.enviarMensaje(this.from, this.message);
-    this.message = "";
-  }
   public registrarUsuario() {
     localStorage.setItem(ALIAS_KEY, this.from)
     this.registrado = true;
+  }
+  public enviar() {
+    this.firebaseService.enviarMensaje(this.from, this.message);
+    this.message = "";
   }
 }

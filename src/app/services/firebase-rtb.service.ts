@@ -27,7 +27,7 @@ export class FirebaseRTBService {
 
   enviarMensaje(_from: string, _message: string) {
     const nuevoMensaje = push(this.ref);//Crea el mensaje y obtiene una clave
-    set(nuevoMensaje, { from: _from, message: _message });//Escribe el mensaje
+    set(nuevoMensaje, { from: _from, message: _message, time: new Date().getTime() });//Escribe el mensaje
   }
 
 }

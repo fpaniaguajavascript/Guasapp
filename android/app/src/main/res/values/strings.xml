@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Guasapp</string>
+    <string name="title_activity_main">Guasapp</string>
+    <string name="package_name">com.fernandopaniagua.guasap</string>
+    <string name="custom_url_scheme">com.fernandopaniagua.guasap</string>
+</resources>

@@ -1,4 +1,4 @@
-package com.fernandopaniagua.guasap;
+package com.fernandopaniagua.sbguasap;
 
 import com.getcapacitor.BridgeActivity;
 

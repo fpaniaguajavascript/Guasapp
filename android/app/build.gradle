@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.fernandopaniagua.guasap"
+    namespace "com.fernandopaniagua.sbguasap"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.fernandopaniagua.guasap"
+        applicationId "com.fernandopaniagua.sbguasap"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

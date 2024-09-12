@@ -7,6 +7,6 @@ export const environment = {
     projectId: "guasap-8c739",
     storageBucket: "guasap-8c739.appspot.com",
     messagingSenderId: "1064420863742",
-    appId: "1:1064420863742:web:8b4c782f896d7a13ddbfaf"
+    appId: "1:1064420863742:web:8b4c782f896d7a13ddbfaf",
   }
 };

@@ -20,6 +20,7 @@ export class FirebaseRTBService {
       snapshot.forEach((childSnapshot) => {
         this.mensajes.push(childSnapshot.val());
       });
+      this.mensajes.reverse();
     }, {
       onlyOnce: false
     });

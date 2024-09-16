@@ -12,6 +12,7 @@
       <ion-title size="large">SanBlasGuasapp</ion-title>
     </ion-toolbar>
   </ion-header>
+
   <ion-item>
     <ion-input placeholder="Emisor" [(ngModel)]="from" [disabled]="registrado"></ion-input>
     <ion-button (click)="registrarUsuario()" [disabled]="from.length==0 || registrado">Registrar</ion-button>
